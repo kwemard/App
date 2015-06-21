@@ -9,6 +9,7 @@ shinyServer(function(input, output) {
         plot(regFormula(), data = mtcars, pch = 18)
         abline(lm(regFormula(),data=mtcars),col=2)
     })
+    output$inputValue= renderPrint({lm(regFormula(),data=mtcars)$coef[2] })
     
 })
 

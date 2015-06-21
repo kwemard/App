@@ -10,7 +10,9 @@ shinyUI(fluidPage(
             #textInput("y","")
         ),
         mainPanel(
-            plotOutput('regPlot')
+            plotOutput('regPlot'),
+            h4("The slop is"),
+            verbatimTextOutput("inputValue")
         )
     )
 ))
